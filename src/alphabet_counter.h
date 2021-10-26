@@ -7,8 +7,10 @@
 
 #include <string>
 
-long count_alphabet(const std::string& str, const std::string& alphabet);
-long count_vowels(const std::string& str);
-long count_consonants(const std::string& str);
+long count_alphabet(const std::string &str, const std::string &alphabet);
+
+long count_vowels(const std::string &str);
+
+long count_consonants(const std::string &str);
 
 #endif //TEXT_ANALYSIS_ALPHABET_COUNTER_H

@@ -4,12 +4,12 @@
 
 #include "alphabet_counter.h"
 
-long count_alphabet(const std::string& str, const std::string& alphabet) {
+long count_alphabet(const std::string &str, const std::string &alphabet) {
     long counter = 0;
 
-    for (char c : str) {
-        for (char v : alphabet) {
-            if ((int)c == (int)v) {
+    for (char c: str) {
+        for (char v: alphabet) {
+            if ((int) c == (int) v) {
                 counter++;
             }
         }
@@ -18,10 +18,10 @@ long count_alphabet(const std::string& str, const std::string& alphabet) {
     return counter;
 }
 
-long count_vowels(const std::string& str) {
+long count_vowels(const std::string &str) {
     return count_alphabet(str, "ÀÓÎÛÈİßŞ¨Åàóîûèıÿş¸å");
 }
 
-long count_consonants(const std::string& str) {
+long count_consonants(const std::string &str) {
     return count_alphabet(str, "ÁÂÃÄÆÇÉÊËÌÍÏĞÑÒÔÕÖ×ØÙáâãäæçéêëìíïğñòôõö÷øù");
 }

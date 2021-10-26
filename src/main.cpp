@@ -12,7 +12,7 @@ int main() {
             "../data/text4.txt"
     };
 
-    for (const auto& file : files) {
+    for (const auto &file: files) {
         std::cout << "* " << file << std::endl;
 
         std::ifstream t(file);
@@ -23,8 +23,8 @@ int main() {
         long vowels = count_vowels(s);
         long consonants = count_consonants(s);
 
-        std::cout << "Vowels: " << vowels << " (" << double(vowels)/double(s.size()) << ")" << std::endl;
-        std::cout << "Consonants: " << consonants << " (" << double(consonants)/double(s.size()) << ")" << std::endl;
+        std::cout << "Vowels: " << vowels << " (" << double(vowels) / double(s.size()) << ")" << std::endl;
+        std::cout << "Consonants: " << consonants << " (" << double(consonants) / double(s.size()) << ")" << std::endl;
         std::cout << std::endl;
     }
 
