@@ -2,7 +2,7 @@
 #include <fstream>
 #include <sstream>
 #include <vector>
-#include "vowels.h"
+#include "methods.h"
 
 int main() {
     std::vector<std::string> files = {
@@ -21,8 +21,10 @@ int main() {
         std::string s = buffer.str();
 
         long vowels = count_vowels(s);
+        long consonants = count_consonants(s);
 
-        std::cout << "Vowels: " << vowels << "(" << double(vowels)/double(s.size()) << ")" << std::endl;
+        std::cout << "Vowels: " << vowels << " (" << double(vowels)/double(s.size()) << ")" << std::endl;
+        std::cout << "Consonants: " << consonants << " (" << double(consonants)/double(s.size()) << ")" << std::endl;
         std::cout << std::endl;
     }
 
