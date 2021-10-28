@@ -13,5 +13,9 @@ int main(int, char **) {
         return -2;
     }
 
+    if (count_rare_consonants("ô÷õöùøæÔ×ÕÖÙØÆ") != 14) {
+        return -3;
+    }
+
     return 0;
 }
