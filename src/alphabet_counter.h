@@ -7,8 +7,6 @@
 
 #include <string>
 
-size_t count_alphabet(const std::string &str, const std::string &alphabet);
-
 size_t count_vowels(const std::string &str);
 
 size_t count_consonants(const std::string &str);
