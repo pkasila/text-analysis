@@ -4,7 +4,7 @@
 
 #include "alphabet_counter.h"
 
-long count_alphabet(const std::string &str, const std::string &alphabet) {
+size_t count_alphabet(const std::string &str, const std::string &alphabet) {
     long counter = 0;
 
     for (char c: str) {
@@ -18,10 +18,14 @@ long count_alphabet(const std::string &str, const std::string &alphabet) {
     return counter;
 }
 
-long count_vowels(const std::string &str) {
+size_t count_vowels(const std::string &str) {
     return count_alphabet(str, "ÀÓÎÛÈİßŞ¨Åàóîûèıÿş¸å");
 }
 
-long count_consonants(const std::string &str) {
+size_t count_consonants(const std::string &str) {
     return count_alphabet(str, "ÁÂÃÄÆÇÉÊËÌÍÏĞÑÒÔÕÖ×ØÙáâãäæçéêëìíïğñòôõö÷øù");
+}
+
+size_t count_rare_consonants(const std::string &str) {
+    return count_alphabet(str, "ô÷õöùøæÔ×ÕÖÙØÆ");
 }

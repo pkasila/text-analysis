@@ -20,11 +20,16 @@ int main() {
         buffer << t.rdbuf();
         std::string s = buffer.str();
 
-        long vowels = count_vowels(s);
-        long consonants = count_consonants(s);
+        size_t vowels = count_vowels(s);
+        size_t consonants = count_consonants(s);
+        size_t rare_consonants = count_rare_consonants(s);
 
-        std::cout << "Vowels: " << vowels << " (" << double(vowels) / double(s.size()) << ")" << std::endl;
-        std::cout << "Consonants: " << consonants << " (" << double(consonants) / double(s.size()) << ")" << std::endl;
+        size_t all_chars = s.size();
+
+        std::cout << "Vowels: " << vowels << " (" << double(vowels) / double(all_chars) << ")" << std::endl;
+        std::cout << "Consonants: " << consonants << " (" << double(consonants) / double(all_chars) << ")" << std::endl;
+        std::cout << "Rare Consonants: " << rare_consonants << " (" << double(rare_consonants) / double(all_chars) << ")" << std::endl;
+
         std::cout << std::endl;
     }
 
