@@ -34,7 +34,7 @@ size_t count_char(const std::string &str, char ca) {
 std::vector<std::string> split_words(const std::string &str) {
     std::string text = str + " ";
 
-    std::string marks = ".!?,;:Â«Â»";
+    std::string marks = ".!?,;:«»";
 
     std::string space_delimiter = " ";
     std::vector<std::string> words{};
@@ -43,7 +43,7 @@ std::vector<std::string> split_words(const std::string &str) {
     while ((pos = text.find(space_delimiter)) != std::string::npos) {
         std::string word = text.substr(0, pos);
         // remove all punctuation marks
-        for (char c : marks) {
+        for (char c: marks) {
             word.erase(std::remove(word.begin(), word.end(), c), word.end());
         }
         words.push_back(word);
@@ -51,4 +51,23 @@ std::vector<std::string> split_words(const std::string &str) {
     }
 
     return words;
+}
+
+std::vector<std::string> split_sentences(const std::string &str) {
+    std::string text = str + ".";
+
+    std::string marks = ".!?";
+
+    std::vector<std::string> sentences{};
+    std::string sentence = "";
+    for (char c: text) {
+        if (marks.find(c) == std::string::npos) {
+            sentence += c;
+        } else if (sentence.size() > 0) {
+            sentences.push_back(sentence);
+            sentence = "";
+        }
+    }
+
+    return sentences;
 }
