@@ -26,6 +26,7 @@ int main() {
         std::map<char, size_t> punctuation_marks = count_punctuation_marks(s);
         std::map<char, double> letter_deltas = letters_occurrences(s);
         std::vector<std::pair<std::string, size_t>> common_words = find_common_words(s);
+        std::map<std::string, size_t> combinations = count_combinations(s);
 
         size_t all_chars = s.size();
 
@@ -49,6 +50,13 @@ int main() {
 
         for(const auto& [key, value] : common_words) {
             std::cout << "- word '" << key << "' - "
+                      << value << std::endl;
+        }
+
+        std::cout << "Combinations:" << std::endl;
+
+        for(const auto& [key, value] : combinations) {
+            std::cout << "- combination '" << key << "' - "
                       << value << std::endl;
         }
 

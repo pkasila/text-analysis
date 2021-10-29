@@ -21,6 +21,10 @@ add_executable(common_words_test common_words_test.cpp
         ../src/find_common_words.cpp
         ../src/utils.cpp)
 
+add_executable(combinations_test combinations_test.cpp
+        ../src/count_combinations.cpp
+        ../src/utils.cpp)
+
 add_test(AlphabetTest alphabet_test)
 
 add_test(LetterStatsTest letter_stats_test)
@@ -32,3 +36,5 @@ add_test(WordsLengthCounterTest words_length_counter_test)
 add_test(SentenceLengthCounterTest sentence_length_counter_test)
 
 add_test(CommonWordsTest common_words_test)
+
+add_test(CombinationsTest combinations_test)

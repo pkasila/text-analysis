@@ -9,5 +9,6 @@
 #include "letter_stats.h"
 #include "find_common_words.h"
 #include "voiced_deaf.h"
+#include "count_combinations.h"
 
 #endif //TEXT_ANALYSIS_METHODS_H

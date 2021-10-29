@@ -17,4 +17,6 @@ std::vector<std::string> split_words(const std::string &str);
 
 std::vector<std::string> split_sentences(const std::string &str);
 
+size_t count_substr(std::string str, std::string sub);
+
 #endif //TEXT_ANALYSIS_UTILS_H
