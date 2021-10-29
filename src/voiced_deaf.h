@@ -5,7 +5,7 @@
 #ifndef TEXT_ANALYSIS_VOICED_DEAF_H
 #define TEXT_ANALYSIS_VOICED_DEAF_H
 
-#using <string>
+#include <string>
 
 size_t count_voiced(const std::string &str);
 size_t count_deaf(const std::string &str);
