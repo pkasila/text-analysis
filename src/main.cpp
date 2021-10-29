@@ -25,6 +25,7 @@ int main() {
         size_t rare_consonants = count_rare_consonants(s);
         std::map<char, size_t> punctuation_marks = count_punctuation_marks(s);
         std::map<char, double> letter_deltas = letters_occurrences(s);
+        std::map<std::string, size_t> common_words = find_common_words(s);
 
         size_t all_chars = s.size();
 
@@ -41,7 +42,14 @@ int main() {
         std::cout << "Letter statistics:" << std::endl;
         for(const auto& [key, value] : letter_deltas) {
             std::cout << "- letter " << (int)key << " - "
-            << value << " (" << value << ")" << std::endl;
+            << value << std::endl;
+        }
+
+        std::cout << "Common words:" << std::endl;
+
+        for(const auto& [key, value] : common_words) {
+            std::cout << "- word '" << key << "' - "
+                      << value << std::endl;
         }
 
         std::cout << std::endl;
