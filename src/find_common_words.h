@@ -8,6 +8,6 @@
 #include <algorithm>
 #include <map>
 
-std::map<std::string, size_t> find_common_words(const std::string &str);
+std::vector<std::pair<std::string, size_t>> find_common_words(const std::string &str);
 
 #endif //TEXT_ANALYSIS_FIND_COMMON_WORDS_H
