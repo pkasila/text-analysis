@@ -7,6 +7,8 @@
 
 #include <algorithm>
 #include <map>
+#include <vector>
+#include <string>
 
 std::vector<std::pair<std::string, size_t>> find_common_words(const std::string &str);
 

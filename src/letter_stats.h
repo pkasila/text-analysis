@@ -6,6 +6,7 @@
 #define TEXT_ANALYSIS_LETTER_STATS_H
 
 #include <map>
+#include <string>
 
 std::map<char, double> letters_occurrences(const std::string &str);
 
