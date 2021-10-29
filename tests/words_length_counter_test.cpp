@@ -16,5 +16,18 @@ int main(int, char **) {
     }else if(res.min != expected.min){
         return -3;
     }
+
+    expected.avg = 3;
+    expected.max = 5;
+    expected.min = 1;
+    res = get_words_lengths("Ô!. êî.! Îôò.... óØîâ! ,ÎÔøîâ");
+    if(res.avg != expected.avg){
+        return -1;
+    }else if (res.max != expected.max){
+        return -2;
+    }else if(res.min != expected.min){
+        return -3;
+    }
+
     return 0;
 }
