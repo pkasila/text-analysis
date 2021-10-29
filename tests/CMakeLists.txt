@@ -9,8 +9,14 @@ add_executable(letter_stats_test letter_stats_test.cpp
 add_executable(utils_test utils_test.cpp
         ../src/utils.cpp)
 
+add_executable(words_length_counter_test words_length_counter_test.cpp
+        ../src/words_length_counter.cpp
+        ../src/utils.cpp)
+
 add_test(AlphabetTest alphabet_test)
 
 add_test(LetterStatsTest letter_stats_test)
 
 add_test(UtilsTest utils_test)
+
+add_test(WordsLengthCounterTest words_length_counter_test)
