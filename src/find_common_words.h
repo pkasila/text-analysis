@@ -5,6 +5,7 @@
 #ifndef TEXT_ANALYSIS_FIND_COMMON_WORDS_H
 #define TEXT_ANALYSIS_FIND_COMMON_WORDS_H
 
+#include <algorithm>
 #include <map>
 
 std::map<std::string, size_t> find_common_words(const std::string &str);
