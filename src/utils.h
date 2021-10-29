@@ -15,4 +15,6 @@ size_t count_char(const std::string &str, char c);
 
 std::vector<std::string> split_words(const std::string &str);
 
+std::vector<std::string> split_sentences(const std::string &str);
+
 #endif //TEXT_ANALYSIS_UTILS_H
