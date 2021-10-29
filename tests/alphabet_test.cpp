@@ -17,5 +17,12 @@ int main(int, char **) {
         return -3;
     }
 
+    std::map<char, size_t> marks = count_punctuation_marks(".!?,;:«»");
+
+    if (marks['.'] != 1 && marks['!'] != 1 && marks['?'] != 1 && marks[','] != 1 &&
+        marks[';'] != 1 && marks[':'] != 1 && marks['"'] != 2) {
+        return -4;
+    }
+
     return 0;
 }
