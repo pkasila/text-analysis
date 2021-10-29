@@ -6,5 +6,6 @@
 #define TEXT_ANALYSIS_METHODS_H
 
 #include "alphabet_counter.h"
+#include "letter_stats.h"
 
 #endif //TEXT_ANALYSIS_METHODS_H

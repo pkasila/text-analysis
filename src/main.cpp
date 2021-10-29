@@ -24,6 +24,7 @@ int main() {
         size_t consonants = count_consonants(s);
         size_t rare_consonants = count_rare_consonants(s);
         std::map<char, size_t> punctuation_marks = count_punctuation_marks(s);
+        std::map<char, double> letter_deltas = letters_occurrences(s);
 
         size_t all_chars = s.size();
 
@@ -31,8 +32,16 @@ int main() {
         std::cout << "Consonants: " << consonants << " (" << double(consonants) / double(all_chars) << ")" << std::endl;
         std::cout << "Rare Consonants: " << rare_consonants << " (" << double(rare_consonants) / double(all_chars) << ")" << std::endl;
 
+        std::cout << "Punctuation marks:" << std::endl;
         for(const auto& [key, value] : punctuation_marks) {
-            std::cout << "- mark '" << key << "' - " << value << " (" << double(value) / double(all_chars) << ")" << std::endl;
+            std::cout << "- mark '" << key << "' - " << value
+            << " (" << double(value) / double(all_chars) << ")" << std::endl;
+        }
+
+        std::cout << "Letter statistics:" << std::endl;
+        for(const auto& [key, value] : letter_deltas) {
+            std::cout << "- letter " << (int)key << " - "
+            << value << " (" << value << ")" << std::endl;
         }
 
         std::cout << std::endl;
