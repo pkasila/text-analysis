@@ -5,8 +5,13 @@
 #include "../src/utils.h"
 
 int main(int, char **) {
-    if (split_words("I LOVE C++").size() != 3) {
+    auto words = split_words("I LOVE C++!");
+    if (words.size() != 3) {
         return -1;
+    }
+
+    if (words[2] != "C++") {
+        return -2;
     }
 
     return 0;

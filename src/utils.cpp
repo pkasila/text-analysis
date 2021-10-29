@@ -3,6 +3,7 @@
 //
 
 #include "utils.h"
+#include <algorithm>
 
 size_t count_alphabet(const std::string &str, const std::string &alphabet) {
     long counter = 0;
@@ -33,12 +34,19 @@ size_t count_char(const std::string &str, char ca) {
 std::vector<std::string> split_words(const std::string &str) {
     std::string text = str + " ";
 
+    std::string marks = ".!?,;:«»";
+
     std::string space_delimiter = " ";
     std::vector<std::string> words{};
 
     size_t pos = 0;
     while ((pos = text.find(space_delimiter)) != std::string::npos) {
-        words.push_back(text.substr(0, pos));
+        std::string word = text.substr(0, pos);
+        // remove all punctuation marks
+        for (char c : marks) {
+            word.erase(std::remove(word.begin(), word.end(), c), word.end());
+        }
+        words.push_back(word);
         text.erase(0, pos + space_delimiter.length());
     }
 
