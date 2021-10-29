@@ -43,7 +43,7 @@ std::vector<std::string> split_words(const std::string &str) {
     while ((pos = text.find(space_delimiter)) != std::string::npos) {
         std::string word = text.substr(0, pos);
         // remove all punctuation marks
-        for (char c : marks) {
+        for (char c: marks) {
             word.erase(std::remove(word.begin(), word.end(), c), word.end());
         }
         words.push_back(word);
@@ -60,10 +60,10 @@ std::vector<std::string> split_sentences(const std::string &str) {
 
     std::vector<std::string> sentences{};
     std::string sentence = "";
-    for(char c: text){
-        if(marks.find(c) == std::string::npos){
+    for (char c: text) {
+        if (marks.find(c) == std::string::npos) {
             sentence += c;
-        }else if(sentence.size() > 0){
+        } else if (sentence.size() > 0) {
             sentences.push_back(sentence);
             sentence = "";
         }

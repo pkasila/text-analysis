@@ -2,26 +2,25 @@
 // Created by Ivan Hontarau on 10/29/2021.
 //
 
-#include <string>
 #include "words_length_counter.h"
 #include "lengths.h"
 #include "vector"
 #include "utils.h"
 
-lengths get_words_lengths(const std::string& text){
+lengths get_words_lengths(const std::string &text) {
     std::vector<std::string> words = split_words(text);
-    lengths res;
+    lengths res{};
     res.max = 0;
     res.min = 99999;
-    for(std::string word: words){
-        res.avg += word.size();
-        if(word.size() > res.max){
+    for (const std::string& word: words) {
+        res.avg += double(word.size());
+        if (word.size() > res.max) {
             res.max = word.size();
         }
-        if(word.size() < res.min){
+        if (word.size() < res.min) {
             res.min = word.size();
         }
     }
-    res.avg /= words.size()*1.0;
+    res.avg /= double(words.size());
     return res;
 };
