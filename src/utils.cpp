@@ -29,3 +29,18 @@ size_t count_char(const std::string &str, char ca) {
 
     return counter;
 }
+
+std::vector<std::string> split_words(const std::string &str) {
+    std::string text = str;
+
+    std::string space_delimiter = " ";
+    std::vector<std::string> words{};
+
+    size_t pos = 0;
+    while ((pos = text.find(space_delimiter)) != std::string::npos) {
+        words.push_back(text.substr(0, pos));
+        text.erase(0, pos + space_delimiter.length());
+    }
+
+    return words;
+}
