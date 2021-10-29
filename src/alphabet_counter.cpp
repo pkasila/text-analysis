@@ -29,3 +29,15 @@ size_t count_consonants(const std::string &str) {
 size_t count_rare_consonants(const std::string &str) {
     return count_alphabet(str, "ô÷õöùøæÔ×ÕÖÙØÆ");
 }
+
+std::map<char, size_t> count_punctuation_marks(const std::string &str) {
+    return std::map<char, size_t> {
+        {'.', count_alphabet(str, ".")},
+        {'!', count_alphabet(str, "!")},
+        {'?', count_alphabet(str, "?")},
+        {',', count_alphabet(str, ",")},
+        {',', count_alphabet(str, ";")},
+        {':', count_alphabet(str, ":")},
+        {'"', count_alphabet(str, "«»")},
+    };
+}
