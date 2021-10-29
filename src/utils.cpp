@@ -59,15 +59,31 @@ std::vector<std::string> split_sentences(const std::string &str) {
     std::string marks = ".!?";
 
     std::vector<std::string> sentences{};
-    std::string sentence = "";
+    std::string sentence;
     for (char c: text) {
         if (marks.find(c) == std::string::npos) {
             sentence += c;
-        } else if (sentence.size() > 0) {
+        } else if (!sentence.empty()) {
             sentences.push_back(sentence);
             sentence = "";
         }
     }
 
     return sentences;
+}
+
+size_t count_substr(std::string str, std::string sub) {
+    bool in_str;
+    size_t co = 0;
+    for (int i = 0; i <= str.length() - sub.length(); ++i) {
+        in_str = true;
+        for (int j = 0; j < sub.length(); ++j) {
+            if (str[i + j] != sub[j]) {
+                in_str = false;
+                break;
+            }
+        }
+        co += in_str;
+    }
+    return co;
 }
