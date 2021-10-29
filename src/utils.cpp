@@ -31,7 +31,7 @@ size_t count_char(const std::string &str, char ca) {
 }
 
 std::vector<std::string> split_words(const std::string &str) {
-    std::string text = str;
+    std::string text = str + " ";
 
     std::string space_delimiter = " ";
     std::vector<std::string> words{};
