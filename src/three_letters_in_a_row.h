@@ -6,6 +6,7 @@
 #define TEXT_ANALYSIS_THREE_LETTERS_IN_A_ROW_H
 
 #include <string>
+#include <vector>
 
 size_t three_letters(const std::string &str);
 
