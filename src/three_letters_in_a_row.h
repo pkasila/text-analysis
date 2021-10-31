@@ -5,4 +5,10 @@
 #ifndef TEXT_ANALYSIS_THREE_LETTERS_IN_A_ROW_H
 #define TEXT_ANALYSIS_THREE_LETTERS_IN_A_ROW_H
 
+#include <string>
+
+bool Is_vowel(const char &chr);
+
+size_t Three_letters(const std::string &str);
+
 #endif //TEXT_ANALYSIS_THREE_LETTERS_IN_A_ROW_H
