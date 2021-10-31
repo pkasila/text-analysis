@@ -12,5 +12,17 @@ int main(int, char **) {
         return -1;
     }
 
+    s = "Прииивееет!";
+    if (three_letters(s) != 2) {
+        std::cout << three_letters(s) << std::endl;
+        return -2;
+    }
+
+    s = "Жыыывеее Бееелааарууусь!";
+    if (three_letters(s) != 5) {
+        std::cout << three_letters(s) << std::endl;
+        return -3;
+    }
+
     return 0;
 }
