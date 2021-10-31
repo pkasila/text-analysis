@@ -87,3 +87,8 @@ size_t count_substr(std::string str, std::string sub) {
     }
     return co;
 }
+
+bool is_vowel(const char &chr){
+    std::string vowels = "";
+    return vowels.find(chr)!=std::string::npos;
+}

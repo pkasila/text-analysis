@@ -7,8 +7,6 @@
 
 #include <string>
 
-bool Is_vowel(const char &chr);
-
-size_t Three_letters(const std::string &str);
+size_t three_letters(const std::string &str);
 
 #endif //TEXT_ANALYSIS_THREE_LETTERS_IN_A_ROW_H
