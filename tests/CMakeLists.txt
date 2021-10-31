@@ -25,6 +25,10 @@ add_executable(combinations_test combinations_test.cpp
         ../src/count_combinations.cpp
         ../src/utils.cpp)
 
+add_executable(three_letters_test three_letters_test.cpp
+        ../src/three_letters_in_a_row.cpp
+        ../src/utils.cpp)
+
 add_test(AlphabetTest alphabet_test)
 
 add_test(LetterStatsTest letter_stats_test)
@@ -38,3 +42,5 @@ add_test(SentenceLengthCounterTest sentence_length_counter_test)
 add_test(CommonWordsTest common_words_test)
 
 add_test(CombinationsTest combinations_test)
+
+add_test(ThreeLettersTest three_letters_test)
