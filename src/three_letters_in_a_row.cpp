@@ -11,9 +11,9 @@ size_t three_letters(const std::string &str) {
     for(auto tem_str : Words){
         auto str_size = double(tem_str.size());
         int cur = 0;
-        while (cur != str_size) {
+        while (cur <= str_size) {
             int temp = 0;
-            while (is_vowel(tem_str[cur]) == is_vowel(tem_str[cur + temp]) && cur + temp != str_size)
+            while (is_vowel(tem_str[cur]) == is_vowel(tem_str[cur + temp]) && cur + temp <= str_size)
                 temp++;
             cur += temp;
             if (temp >= 3)
