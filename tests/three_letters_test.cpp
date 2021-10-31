@@ -24,5 +24,11 @@ int main(int, char **) {
         return -3;
     }
 
+    s = "Æûûûûûûגווו Áוווכאאאנףףףסü!";
+    if (three_letters(s) != 5) {
+        std::cout << three_letters(s) << std::endl;
+        return -4;
+    }
+
     return 0;
 }
