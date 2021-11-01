@@ -20,14 +20,14 @@ count_words_from_list(const std::string &text, std::vector<std::string> wordsLis
         }
         if (std::find(wordsList.begin(), wordsList.end(), word) != wordsList.end()) {
             found = false;
-            for (int i = 0; i < wordsListCount.size(); i++) {
-                if (wordsListCount[i].first == word) {
+            for (auto & i : wordsListCount) {
+                if (i.first == word) {
                     found = true;
-                    wordsListCount[i].second++;
+                    i.second++;
                 }
             }
             if (!found) {
-                wordsListCount.push_back({word, 1});
+                wordsListCount.emplace_back(word, 1);
             }
         }
     }
