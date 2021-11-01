@@ -14,7 +14,7 @@ int main(int, char **) {
     if (res.size() != 5) {
         return -1;
     }
-    for (std::pair p: res) {
+    for (const std::pair<std::string, std::size_t>& p: res) {
         if (p.second != 1) {
             return -2;
         }

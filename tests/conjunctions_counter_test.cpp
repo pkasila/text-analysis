@@ -13,7 +13,7 @@ int main(int, char **) {
     if (res.size() != 4) {
         return -1;
     }
-    for (std::pair p: res) {
+    for (const std::pair<std::string, std::size_t>& p: res) {
         if (p.second != 1) {
             return -2;
         }
@@ -23,7 +23,7 @@ int main(int, char **) {
     if (res.size() != 6) {
         return -3;
     }
-    for (std::pair p: res) {
+    for (const std::pair<std::string, std::size_t>& p: res) {
         if (p.second != 2) {
             return -4;
         }
