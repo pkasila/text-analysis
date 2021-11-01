@@ -16,4 +16,9 @@ size_t count_char(const std::string &str, char c);
 std::vector<std::string> split_words(const std::string &str);
 
 std::vector<std::string> split_sentences(const std::string &str);
+
+size_t count_substr(std::string str, std::string sub);
+
+bool is_vowel(const char &chr);
+
 #endif //TEXT_ANALYSIS_UTILS_H
