@@ -52,6 +52,10 @@ add_executable(three_letters_test three_letters_test.cpp
         ../src/three_letters_in_a_row.cpp
         ../src/utils.cpp)
 
+add_executable(chaining_test chaining_test.cpp
+        ../src/chaining.cpp
+        ../src/utils.cpp)
+
 add_test(AlphabetTest alphabet_test)
 
 add_test(LetterStatsTest letter_stats_test)
@@ -77,3 +81,5 @@ add_test(CombinationsTest combinations_test)
 add_test(ThreeLettersTest three_letters_test)
 
 add_test(ThreeLettersStatsTest three_letters_stats_test)
+
+add_test(ChainingTest chaining_test)
