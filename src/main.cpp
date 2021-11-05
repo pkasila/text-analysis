@@ -129,7 +129,7 @@ int main() {
         vector<pair<string, size_t>> prepositions = count_prepositions(s);
         ofstream o_prepositions("../out/" + file + "/language_means/prepositions.csv");
         o_prepositions << "mean,number,out_of" << endl;
-        for (const auto&[key, value]: particles) {
+        for (const auto&[key, value]: prepositions) {
             o_prepositions << "\"" << key << "\"," << value << "," << words_count << endl;
         }
         o_prepositions.close();
