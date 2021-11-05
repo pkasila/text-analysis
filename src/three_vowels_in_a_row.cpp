@@ -2,10 +2,10 @@
 // Created by ab on 31/10/2021.
 //
 
-#include "three_letters_in_a_row.h"
+#include "three_vowels_in_a_row.h"
 #include "utils.h"
 
-size_t three_letters(const std::string &str) {
+size_t three_vowels_in_a_row(const std::string &str) {
     int count = 0;
     std::vector <std::string> Words = split_words(str);
     for(auto tem_str : Words) {

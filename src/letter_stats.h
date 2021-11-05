@@ -8,6 +8,11 @@
 #include <map>
 #include <string>
 
-std::map<char, double> letters_occurrences(const std::string &str);
+struct delta {
+    double base;
+    double diff;
+};
+
+std::map<char, delta> letters_occurrences(const std::string &str);
 
 #endif //TEXT_ANALYSIS_LETTER_STATS_H

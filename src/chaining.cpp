@@ -10,22 +10,22 @@ chains get_chaining(const std::string& str) {
     int sgl_sgl = 0;
     int sgl_gl = 0;
 
-    std::string gls = "СѓРµСЌРѕР°С‹СЏСЋРёС‘РЈР•Р­РћРђР«РЇР®РРЃ";
-    std::string sgls = "РіР№С†РєРЅС€С‰Р·С…Р¶РґР»СЂРїРІС„С‡СЃРјС‚Р±Р“Р™Р¦РљРќРЁР©Р—РҐР–Р”Р›Р РџР’Р¤Р§РЎРњРўР‘";
+    std::string gls = "уеэоаыяюиёУЕЭОАЫЯЮИЁ";
+    std::string sgls = "гйцкншщзхждлрпвфчсмтбГЙЦКНШЩЗХЖДЛРПВФЧСМТБ";
 
     std::string st = str, slv;
 
-    while (st.find_first_of("Р¬СЊРЄСЉ") != std::string::npos)
-        st.erase(st.find_first_of("Р¬СЊРЄСЉ"), 1);
+    while (st.find_first_of("ЬьЪъ") != std::string::npos)
+        st.erase(st.find_first_of("ЬьЪъ"), 1);
 
 
     while (st.length() != 0) {
 
         while (st.find_first_of(" ,.-:") == 0) //
-            st.erase(0, 1);                //СѓР±РёСЂР°РµРј Р·РЅР°РєРё РїСЂРµРїРёРЅР°РЅРёСЏ РїРµСЂРµРґ СЃР»РѕРІРѕРј
+            st.erase(0, 1);                //убираем знаки препинания перед словом
 
-        slv = st.substr(0, st.find_first_of(" ,.-:")); //РІС‹РґРµР»СЏРµРј СЃР»РѕРІРѕ РІ РїРµСЂРµРјРµРЅРЅСѓСЋ slv
-        st.erase(0, st.find_first_of(" ,.-:"));   // СѓРґР°Р»СЏРµРј СЃР»РѕРІРѕ РёР· СЃС‚СЂРѕРєРё
+        slv = st.substr(0, st.find_first_of(" ,.-:")); //выделяем слово в переменную slv
+        st.erase(0, st.find_first_of(" ,.-:"));   // удаляем слово из строки
 
         while (slv.length() != 0) {
             if ((slv.find_first_of(gls) == 0) && (slv.find_first_of(sgls) == 1))

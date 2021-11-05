@@ -2,7 +2,7 @@
 // Created by Demyan Postnikov on 31.10.21.
 //
 
-#include "three_letters_stats_test.h"
+#include "three_by_three_letters_stats.h"
 #include "utils.h"
 
 bool check_pair(std::string w1, std::string w2) {
@@ -29,7 +29,7 @@ bool check_pair(std::string w1, std::string w2) {
     return (k1 == 2 || k1 == 3) && (k2 == 2 || k2 == 3);
 }
 
-size_t three_letters_stats(const std::string &str) {
+size_t three_by_three_letters_stats(const std::string &str) {
     std::vector<std::string> words = split_words(str);
     size_t pairs = 0;
     for (int i = 0; i < words.size() - 1; i++) {
