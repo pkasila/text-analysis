@@ -44,12 +44,12 @@ add_executable(combinations_test combinations_test.cpp
         ../src/count_combinations.cpp
         ../src/utils.cpp)
 
-add_executable(three_letters_stats_test three_letters_stats_test.cpp
-        ../src/three_letters_stats.cpp
+add_executable(three_letters_stats_test three_by_three_letters_stats_test.cpp
+        ../src/three_by_three_letters_stats.cpp
         ../src/utils.cpp)
 
-add_executable(three_letters_test three_letters_test.cpp
-        ../src/three_letters_in_a_row.cpp
+add_executable(three_letters_test three_vowels_in_a_row_test.cpp
+        ../src/three_vowels_in_a_row.cpp
         ../src/utils.cpp)
 
 add_executable(chaining_test chaining_test.cpp

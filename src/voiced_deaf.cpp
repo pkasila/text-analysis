@@ -6,9 +6,9 @@
 #include "utils.h"
 
 size_t count_voiced(const std::string &str) {
-    return count_alphabet(str, "Ğ‘Ğ’Ğ“Ğ”Ğ—Ğ–Ğ›ĞœĞĞ Ğ™Ğ±Ğ²Ğ³Ğ´Ğ·Ğ¶Ğ»Ğ¼Ğ½Ñ€Ğ¹");
+    return count_alphabet(str, "ÁÂÃÄÇÆËÌÍĞÉáâãäçæëìíğé");
 }
 
 size_t count_deaf(const std::string &str) {
-    return count_alphabet(str, "ĞŸĞ¤ĞšĞ¢Ğ¡Ğ¨Ğ¥Ğ¦Ğ§Ğ©Ğ¿Ñ„ĞºÑ‚ÑÑˆÑ…Ñ†Ñ‡Ñ‰");
+    return count_alphabet(str, "ÏÔÊÒÑØÕÖ×Ùïôêòñøõö÷ù");
 }
