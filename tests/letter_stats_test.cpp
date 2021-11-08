@@ -6,8 +6,8 @@
 #include <iostream>
 
 int main(int, char **) {
-    std::map<char, double> o = letters_occurrences(" ");
-    if (o[' '] != 0.855) {
+    std::map<char, delta> o = letters_occurrences(" ");
+    if (o[' '].diff != 0.855) {
         return -1;
     }
 
