@@ -2,8 +2,8 @@
 A group task at the Lyceum BSU to create a digital fingerprint of the text to identify the author.
 
 # What is this project?
-This project is a project that groups of students at the Lyceum BSU had to complete afterwards
-learning the basic functions of working with strings and files in C++. It was necessary to create digital
+This project is a project that groups of students at the Lyceum BSU had to complete after
+learning the basic functions to work with strings and files in C++. It was necessary to create digital
 fingerprint for each of the four texts and determine which text stands out.
 
 # What has been done in this project?
