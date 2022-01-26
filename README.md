@@ -1,7 +1,7 @@
 # Text analysis
 A group task at the Lyceum BSU to create a digital fingerprint of the text to identify the author.
 
-# What is this project?
+# What is this project about?
 This project is a project that groups of students at the Lyceum BSU had to complete after
 learning the basic functions to work with strings and files in C++. It was necessary to create digital
 fingerprint for each of the four texts and determine which text stands out.
