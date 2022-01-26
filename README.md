@@ -6,7 +6,9 @@ This project is a project that groups of students at the Lyceum BSU had to compl
 learning the basic functions of working with strings and files in C++. It was necessary to create digital
 fingerprint for each of the four texts and determine which text stands out.
 
-# What has been done in this project? (for Russian language)
+# What has been done in this project?
+
+**(for Russian)**
 
 - [x] Presence of rare consonants
 - [x] Presence of symbols: all letters, punctuation marks and sonorous and deaf consonant sounds
